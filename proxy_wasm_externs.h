@@ -75,6 +75,8 @@ extern "C" WasmResult proxy_get_shared_data(const char *key_ptr, size_t key_size
 extern "C" WasmResult proxy_set_shared_data(const char *key_ptr, size_t key_size,
                                             const char *value_ptr, size_t value_size, uint32_t cas);
 
+extern "C" WasmResult proxy_remove_shared_data(const char *key_ptr, size_t key_size, uint32_t cas);
+
 // SharedQueue
 // Note: Registering the same queue_name will overwrite the old registration
 // while preseving any pending data. Consequently it should typically be
