@@ -72,8 +72,8 @@ extern "C" WasmResult proxy_get_shared_data(const char *key_ptr, size_t key_size
 //  If cas != 0 and cas != the current cas for 'key' return false, otherwise set
 //  the value and return true.
 // Returns: Ok, CasMismatch
-extern "C" WasmResult proxy_set_shared_data(const char *key_ptr, size_t key_size,
-                                            const char *value_ptr, size_t value_size, uint32_t cas);
+// extern "C" WasmResult proxy_set_shared_data(const char *key_ptr, size_t key_size,
+//                                             const char *value_ptr, size_t value_size, uint32_t cas);
 
 extern "C" WasmResult proxy_remove_shared_data(const char *key_ptr, size_t key_size, uint32_t cas);
 
