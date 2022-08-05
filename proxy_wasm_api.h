@@ -723,9 +723,9 @@ inline WasmResult getSharedData(std::string_view key, WasmDataPtr *value, uint32
   return WasmResult::Ok;
 }
 
-// inline WasmResult setSharedData(std::string_view key, std::string_view value, uint32_t cas = 0) {
-//   return proxy_set_shared_data(key.data(), key.size(), value.data(), value.size(), cas);
-// }
+inline WasmResult setSharedData(std::string_view key, std::string_view value, uint32_t cas = 0) {
+  return proxy_set_shared_data(key.data(), key.size(), value.data(), value.size(), cas);
+}
 
 inline WasmResult removeSharedData(std::string_view key, uint32_t cas = 0) {
   return proxy_remove_shared_data(key.data(), key.size(), cas);
